@@ -1,0 +1,14 @@
+%h2
+  Pusher Test
+
+#messages
+
+= link_to "Send Message", "/push", remote: true
+
+:javascript  
+  var pusher = new Pusher('6f58f098e40b822536e9');
+  var channel = pusher.subscribe('test-channel');
+  channel.bind('test-event', function(data) {
+
+    $('#messages').append('<div id="received">Message Received</div>')
+  });
