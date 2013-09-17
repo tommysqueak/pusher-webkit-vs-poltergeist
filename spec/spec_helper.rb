@@ -1,9 +1,9 @@
 require 'capybara/rspec'
 require 'capybara/poltergeist'
+# require 'capybara/webkit'
 
-  require File.expand_path('../../config/environment', __FILE__)
-  require 'rspec/rails'
-
+require File.expand_path('../../config/environment', __FILE__)
+require 'rspec/rails'
 
 RSpec.configure do |config|
     config.mock_with :rspec
@@ -25,6 +25,7 @@ end
 
 Capybara.configure do |config|
   # config.javascript_driver = :poltergeist_debug
+  # config.javascript_driver = :webkit
   config.javascript_driver = :poltergeist
   config.default_wait_time = 20
 end

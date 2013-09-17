@@ -33,7 +33,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'rspec-rails'
 gem 'capybara'
 gem 'launchy' # Needed by poltergeist
-gem 'poltergeist'
+gem 'poltergeist', github: 'jonleighton/poltergeist'
+# gem "capybara-webkit", github: 'thoughtbot/capybara-webkit'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
