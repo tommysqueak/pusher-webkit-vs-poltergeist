@@ -10,5 +10,5 @@
   var channel = pusher.subscribe('test-channel');
   channel.bind('test-event', function(data) {
 
-    $('#messages').append('<div id="received">Message Received</div>')
+    $('#messages').append('<div class="message">Message Received</div>')
   });
