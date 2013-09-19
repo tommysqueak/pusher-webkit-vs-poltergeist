@@ -8,7 +8,8 @@
 :javascript  
   var pusher = new Pusher('6f58f098e40b822536e9');
   var channel = pusher.subscribe('test-channel');
-  channel.bind('test-event', function(data) {
+  var messageId = 1;
 
-    $('#messages').append('<div class="message">Message Received</div>')
+  channel.bind('test-event', function(data) {
+    $('#messages').append('<div id="message-'+ messageId++ + '">Message Received</div>');
   });
